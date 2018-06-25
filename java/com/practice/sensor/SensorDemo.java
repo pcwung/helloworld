@@ -3,6 +3,7 @@ package com.practice.sensor;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Instrumentation;
+//import android.app.Instrumentation;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -56,6 +57,7 @@ public class SensorDemo extends Activity implements View.OnClickListener {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 new Thread(new Runnable() {
 
                     @Override
@@ -69,6 +71,20 @@ public class SensorDemo extends Activity implements View.OnClickListener {
 
                     }
                 }).start();
+//
+//                new Thread(new Runnable() {
+//
+//                    @Override
+//                    public void run() {
+//
+//                        Instrumentation inst = new Instrumentation();
+//                        inst.sendKeyDownUpSync(KeyEvent.KEYCODE_UNKNOWN);
+//                        //inst.sendKeyDownUpSync(KeyEvent.KEYCODE_VOLUME_DOWN);
+//
+//                        System.out.println("test by Wade send KEYCODE_A");
+//
+//                    }
+//                }).start();
 
 
 //                AlertDialog.Builder builder = new AlertDialog.Builder(SensorDemo.this);
