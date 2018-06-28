@@ -105,6 +105,19 @@ public class SensorDemo extends Activity implements View.OnClickListener {
 //                AlertDialog dialog = builder.create();
 //                dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
 //                dialog.show();
+
+
+            }
+        });
+
+        final TextView goto_music = (TextView) findViewById(R.id.textView6);
+        goto_music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("test by Wade start an activity !");
+                Intent intent;
+                intent = new Intent(SensorDemo.this, musicActivity.class);
+                startActivity(intent);
             }
         });
 
