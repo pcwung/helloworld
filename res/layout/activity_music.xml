@@ -38,24 +38,31 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:drawableTop="@drawable/press_change_bg"
-            android:clickable="true"
-            android:text="TextView" />
+            android:clickable="true" />
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableTop="@drawable/shejiao"
-            android:text="TextView" />
+            android:drawableLeft="@drawable/shejiao"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:background="#c7bcaa"
+            android:text="社交" />
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableTop="@drawable/yule"
-            android:text="TextView" />
+            android:drawableLeft="@drawable/yule"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:background="#c7bcaa"
+            android:text="娱乐"/>
 
     </LinearLayout>
 
