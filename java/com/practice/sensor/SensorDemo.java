@@ -52,7 +52,7 @@ public class SensorDemo extends Activity implements View.OnClickListener {
         startService(serviceIntent);
 
         final Button button3 = (Button) findViewById(R.id.button3);
-        button3.setText("make a dialog");
+        button3.setText("send a key report by Instrumentation");
         //监听button事件
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,28 +87,38 @@ public class SensorDemo extends Activity implements View.OnClickListener {
 //                }).start();
 
 
-//                AlertDialog.Builder builder = new AlertDialog.Builder(SensorDemo.this);
-//                builder.setTitle("普通的对话框的标题");
-//                builder.setMessage("这是一个普通的对话框的内容");
-//                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        Toast.makeText(SensorDemo.this, "取消", Toast.LENGTH_SHORT).show();
-//                    }
-//                });
-//                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        Toast.makeText(SensorDemo.this, "确定", Toast.LENGTH_SHORT).show();
-//                    }
-//                });
-//                AlertDialog dialog = builder.create();
-//                dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
-//                dialog.show();
+            }
+        });
 
+
+        final Button button2 = (Button) findViewById(R.id.button2);
+        button2.setText("make a dialog");
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(SensorDemo.this);
+                builder.setTitle("普通的对话框的标题");
+                builder.setMessage("这是一个普通的对话框的内容");
+                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(SensorDemo.this, "取消", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(SensorDemo.this, "确定", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                //dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+                dialog.show();
 
             }
         });
+
 
         final TextView goto_music = (TextView) findViewById(R.id.textView6);
         goto_music.setOnClickListener(new View.OnClickListener() {
